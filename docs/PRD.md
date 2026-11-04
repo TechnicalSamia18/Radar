@@ -506,3 +506,19 @@ shows the build:
 
 4.  **Company source:** PSEB, depending on their answer, or Google
     Places from the start.
+
+**13. v1 scope (decided 4 Nov 2026)**
+
+The full PRD was estimated at 11–13 build hours; the assignment asks for a small app. v1 keeps the core loop plus the features used every week, and moves the rest to “Deliberately not implemented” with a reason.
+
+| Area | In v1 | Not in v1 (reason) |
+|---|---|---|
+| Discovery | REQ-001 CSV import, REQ-002 add by hand, REQ-004 non-software filter, **REQ-003 automated discovery via Google Places (optional key, free monthly tier) and OpenStreetMap (no key)** | Automated PSEB import: its terms for automated use are unknown; PSEB data can still come in by CSV |
+| Careers source | REQ-010, REQ-012, REQ-013 override | REQ-011 hiring-platform feeds: few Pakistani software houses use them; their pages are still read as normal careers pages |
+| Checking | REQ-020, REQ-021, REQ-024 | — |
+| Extraction | REQ-022 (rules-based) | REQ-023 AI extraction: the app must work without it; adds a paid key and a new failure mode |
+| Matching | REQ-040, REQ-041 (all warnings), REQ-042 | — |
+| Dashboard | REQ-050, REQ-051 combined filters, REQ-052 as CSV (formula-safe) | Excel (.xlsx): CSV opens in Excel; one fewer dependency |
+| Tracking | REQ-060, REQ-061, REQ-062, REQ-063 | — |
+| Failure states | All of §4 | Duplicate-opening merging: rare in practice; duplicates show twice |
+| Hosting | Public read-only demo with fictional sample data; real data runs locally | Online login (Auth.js) + delete-my-data: Auth.js v5 is still beta and a login adds risk; local data is also the most private |

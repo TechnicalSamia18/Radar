@@ -10,7 +10,7 @@
   - Daily check = a Node script run by a scheduled GitHub Actions workflow (no serverless timeout)
   - fetch + Cheerio + robots.txt parser; chrono-node for dates; Zod for all validation
   - Optional LLM extraction behind an env variable; app must work without it
-  - Auth.js restricted to the owner's account; public read-only demo mode with sample data
+  - ~~Auth.js restricted to the owner's account~~ (cut, ADR-003); public read-only demo mode with sample data
   - Vitest (logic) + Playwright (a few page tests)
 - **Consequences:** Vercel functions can't write a local SQLite file, so production needs Turso. Auth.js v5 is still a beta release (see A-01).
 
@@ -18,6 +18,12 @@
 - **Date:** 2026-11-04 · **Status:** Accepted
 - **Decision:** Jost and Cormorant Garamond via `next/font/google`, which downloads them at build time and self-hosts them (no request to Google from the visitor's browser) [VERIFIED: node_modules/next/dist/docs/01-app/03-api-reference/02-components/font.md, line 13].
 - **Consequence:** the first build needs internet access.
+
+## ADR-003: v1 scope cut and read-only online demo
+- **Date:** 2026-11-04 · **Status:** Accepted [USER]
+- **Context:** full PRD ≈ 11–13 build hours; assignment asks for a small app. Login (Auth.js v5) is still beta and is the riskiest piece.
+- **Decision:** keep the core loop + tracker + override + filters + all warnings + automated discovery (Places/OSM). Cut AI extraction, hiring-platform feeds, automated PSEB import, Excel, duplicate merging and online login. Deployed site = read-only demo with fictional data; real use is local.
+- **Consequences:** no secrets or personal data on the public site; the user runs Radar on their own computer for real use. Full table in PRD §13.
 
 ## Blueprint deviations
 | Date | Rule changed | Reason | Approved by |

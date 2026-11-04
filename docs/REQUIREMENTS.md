@@ -7,16 +7,16 @@ This file tracks status only.
 |---|---|---|---|---|
 | 001 | CSV import | Must | 2 | — |
 | 002 | Add company by hand | Must | 2 | — |
-| 003 | Automated directory import | Should | backlog | — |
+| 003 | Automated discovery (Places + OSM; PSEB via CSV) | Should | 2 | — |
 | 004 | Filter non-software companies | Must | 2 | — |
 | 010 | Find careers source | Must | 3 | — |
-| 011 | Recognise hiring platforms | Must | 3 | — |
+| 011 | Recognise hiring platforms | Must | — | Cut from v1 (PRD §13) |
 | 012 | Find hiring email | Must | 3 | — |
 | 013 | Override careers link | Should | 3 | — |
 | 020 | Daily check + Check now | Must | 4 | — |
 | 021 | Detect changes | Must | 4 | — |
 | 022 | Extract opening details | Must | 5 | — |
-| 023 | AI-assisted extraction | Should | 5 | — |
+| 023 | AI-assisted extraction | Should | — | Cut from v1 (PRD §13) |
 | 024 | Image/PDF job ads | Must | 4 | — |
 | 030 | Upload resume | Must | 1 | Done (M1) |
 | 031 | Detect skills | Must | 1 | Done (M1) |
