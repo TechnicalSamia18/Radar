@@ -8,3 +8,4 @@
 | R-04 | Malicious job post plants a spreadsheet formula | Low | Medium | Neutralise `= + - @` cells on export (REQ-052) | Dev |
 | R-05 | Auth.js v5 is beta | Medium | Medium | Pin exact version; owner-only login; re-check at Milestone 9 | Dev |
 | R-06 | Scope creep | High | Medium | Anything outside the PRD goes to `docs/BACKLOG.md` | User |
+| R-07 | Profile Server Actions have no login until Milestone 9 | — | High if deployed | Don't deploy publicly before Auth.js is added; local use only | Dev |

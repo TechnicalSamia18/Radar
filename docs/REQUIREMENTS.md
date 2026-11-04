@@ -18,9 +18,9 @@ This file tracks status only.
 | 022 | Extract opening details | Must | 5 | — |
 | 023 | AI-assisted extraction | Should | 5 | — |
 | 024 | Image/PDF job ads | Must | 4 | — |
-| 030 | Upload resume | Must | 1 | In progress |
-| 031 | Detect skills | Must | 1 | In progress |
-| 032 | Save profile | Must | 1 | In progress |
+| 030 | Upload resume | Must | 1 | Done (M1) |
+| 031 | Detect skills | Must | 1 | Done (M1) |
+| 032 | Save profile | Must | 1 | Done (M1) |
 | 040 | Fit score | Must | 6 | — |
 | 041 | Eligibility warnings | Must | 6 | — |
 | 042 | Openings without details | Must | 6 | — |

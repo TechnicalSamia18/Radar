@@ -4,17 +4,18 @@
 - **Version:** v0.1.0
 - **Chosen stack:** Next.js 16.4.3 + Tailwind 4.3.3 + Drizzle/libSQL (SQLite locally, Turso in prod) — ADR-001
 - **Hosting:** Vercel (web) + GitHub Actions (daily check)
-- **Completed:** scaffold, pinned deps + lockfile, project docs
-- **In progress:** Milestone 1 — design system, landing page, app shell, profile + resume upload (REQ-030–032)
-- **Blockers / open questions:** PDF text library choice (Reuse Proposal, needs APPROVED); Auth.js sign-in provider (see A-02)
+- **Completed:** Milestone 1 — scaffold, pinned deps, docs, design tokens, landing page, app shell, profile page with resume upload/skills/preferences (REQ-030–032)
+- **In progress:** —
+- **INCOMPLETE (flagged):** no login yet (Server Actions are open) → do NOT deploy publicly before Milestone 9 (R-07); `/demo` is a placeholder page (M9); dashboard shows only first-run empty states (M7)
+- **Blockers / open questions:** Auth.js sign-in provider (A-02, decide at M9)
 - **Open assumptions:** see ASSUMPTIONS.md
-- **Next action:** finish Milestone 1
+- **Next action:** Milestone 2 — companies: CSV import, manual add, non-software filter (REQ-001, 002, 004)
 - **Last updated:** 2026-11-04
 
 ## Milestones (PRD §11)
 | # | Milestone | REQs | Status |
 |---|---|---|---|
-| 1 | Setup, profile, resume | 030–032 | In progress |
+| 1 | Setup, profile, resume | 030–032 | Done 2026-11-04 |
 | 2 | Companies | 001, 002, 004 | — |
 | 3 | Careers finder | 010–012 | — |
 | 4 | Daily check, change detection | 020, 021, 024 | — |
