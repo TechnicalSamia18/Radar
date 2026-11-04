@@ -30,6 +30,12 @@
 - **Decision:** nothing paid; use a free option if one exists, otherwise skip the feature.
 - **Consequences:** Google Places dropped (card required, bills past free tier) → discovery uses OpenStreetMap only, plus CSV and add by hand. Turso dropped: the read-only online demo uses sample data bundled with the app. Vercel Hobby, GitHub Actions and all npm libraries are free.
 
+## ADR-005: Frontend-only v1
+- **Date:** 2026-11-04 · **Status:** Accepted [USER]
+- **Context:** Radar is the project for a frontend internship application. Reviewers judge UI quality, states, accessibility and component design; a scraper/scheduler shows little of that.
+- **Decision:** v1 runs entirely in the browser (PRD §14). SQLite/Drizzle, server actions and the daily-check plan are removed from the app (kept in git history). Data lives in localStorage behind a repository interface. Resume PDFs are parsed client-side with unpdf.
+- **Consequences:** free static hosting, no secrets, best privacy (nothing leaves the browser). Openings are added by pasting, not discovered automatically. Supersedes ADR-003/004 hosting notes.
+
 ## Blueprint deviations
 | Date | Rule changed | Reason | Approved by |
 | :--- | :--- | :--- | :--- |

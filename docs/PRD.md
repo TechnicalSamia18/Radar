@@ -524,3 +524,11 @@ The full PRD was estimated at 11–13 build hours; the assignment asks for a sma
 | Hosting | Public read-only demo with fictional sample data built into the app (no hosted database); real data runs locally in SQLite | Online login (Auth.js) + delete-my-data: Auth.js v5 is still beta and a login adds risk; local data is also the most private |
 
 **Free-only rule (4 Nov 2026, user):** nothing paid. If a free option exists we use it; otherwise the feature is skipped. Google Places and Turso are therefore not used.
+
+**14. Frontend-only v1 (decided 4 Nov 2026)**
+
+The assignment is for a **frontend** internship, so v1 runs entirely in the browser: no server, no database, no scheduled job. It deploys as a free static site.
+
+- **In v1:** resume PDF read in the browser (never uploaded) → skills; paste an opening you found → title, type, location, skills, experience, deadline and how to apply are extracted ("Not stated" when missing); fit score with reasons and eligibility warnings; tracker (Saved → Applied → Interview → Offer / Rejected, Missed) with dates, notes and a 7-day nudge; dashboard, combined filters, CSV export (formula-safe); companies list with careers-source status; one-click demo data (fictional companies); all loading / empty / error states.
+- **Storage:** the browser's localStorage, validated with Zod on every load (corrupt data → clear error + reset option). All reads and writes go through one repository interface so a real backend can replace it later.
+- **Later (backend version):** automatic discovery, careers-page finder, daily check, change detection (REQ-003, 010–012, 020–021, 024 automation). Their screens and states exist now with sample data.
