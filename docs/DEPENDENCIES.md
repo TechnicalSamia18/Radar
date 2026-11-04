@@ -11,6 +11,7 @@ Scan command: `npm audit` (also `npx osv-scanner scan source -r .` before launch
 | drizzle-orm | prod | 0.45.4 | Type-safe, parameterized SQL | Apache-2.0 | 2026-10-08 | 2026-11-04 · npm audit | clean |
 | @libsql/client | prod | 0.18.0 | SQLite file locally, Turso in prod | MIT | 2026-09-02 | 2026-11-04 · npm audit | clean |
 | zod | prod | 4.6.7 | Input / AI-output validation | MIT | 2026-10-12 | 2026-11-04 · npm audit | clean |
+| unpdf | prod | 1.9.1 | Resume PDF → text (REQ-030). Bundles pdf.js ~6.4.299, zero deps. Chosen over pdf-parse/pdfjs-dist; 2.x skipped (new major, <1 week old) | MIT | 2026-10-19 | 2026-11-04 · npm audit | clean · APPROVED [USER] 2026-11-04 |
 | tailwindcss + @tailwindcss/turbopack | dev | 4.3.3 | Styling (4.3.4 was <3 days old) | MIT | 2026-07-16 | 2026-11-04 · npm audit | clean |
 | typescript | dev | 5.9.3 | Types (create-next-app default; 7.x not yet used by Next) | Apache-2.0 | 2025-09-30 | 2026-11-04 · npm audit | clean |
 | drizzle-kit | dev | 0.31.11 | Schema push / migrations | MIT | 2026-09-21 | 2026-11-04 · npm audit | 1 moderate (below) |
