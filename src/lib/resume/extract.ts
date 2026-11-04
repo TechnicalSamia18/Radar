@@ -6,28 +6,16 @@
 // The PDF itself is never stored; only the skills the user confirms are saved.
 import { extractText, getDocumentProxy } from "unpdf";
 import { detectSkills } from "@/lib/skills/detect";
+import { MAX_RESUME_BYTES, MAX_RESUME_PAGES, RESUME_MESSAGES, type ResumeFailure } from "./messages";
 
-export const MAX_RESUME_BYTES = 5 * 1024 * 1024; // 5 MB
-export const MAX_RESUME_PAGES = 10;
+export { MAX_RESUME_BYTES, RESUME_MESSAGES };
+
 // Fewer non-space characters than this means there is no real text layer (scanned image).
 const MIN_TEXT_CHARS = 40;
-
-export type ResumeFailure = "empty" | "too_large" | "not_pdf" | "encrypted" | "too_many_pages" | "no_text" | "unreadable";
 
 export type ResumeResult =
   | { ok: true; text: string; skills: string[]; pages: number }
   | { ok: false; reason: ResumeFailure; message: string };
-
-export const RESUME_MESSAGES: Record<ResumeFailure, string> = {
-  empty: "That file is empty. Choose your resume PDF and try again.",
-  too_large: "That file is over 5 MB. Export a smaller PDF, or add your skills by hand below.",
-  not_pdf: "That doesn't look like a PDF. Upload a .pdf file, or add your skills by hand below.",
-  encrypted: "This PDF is password-protected, so Radar can't read it. Remove the password or add your skills by hand below.",
-  too_many_pages: "That PDF has more than 10 pages. Upload just your resume, or add your skills by hand below.",
-  no_text:
-    "This PDF looks scanned (it's an image with no selectable text), so Radar can't read it. Add your skills by hand below.",
-  unreadable: "Radar couldn't read this PDF. It may be damaged. Add your skills by hand below.",
-};
 
 function fail(reason: ResumeFailure): ResumeResult {
   return { ok: false, reason, message: RESUME_MESSAGES[reason] };

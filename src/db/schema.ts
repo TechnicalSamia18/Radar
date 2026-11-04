@@ -2,9 +2,7 @@
 // migrations (`npm run db:generate`) and gives us typed, parameterized queries.
 // More tables are added milestone by milestone.
 import { integer, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
-
-export const SEEKING = ["internship", "job", "both"] as const;
-export const REMOTE_PREFERENCE = ["onsite_ok", "remote_only", "any"] as const;
+import { REMOTE_PREFERENCE, SEEKING } from "../lib/profile/options";
 
 /**
  * The single user's profile (REQ-032). Always exactly one row with id = 1.

@@ -26,9 +26,10 @@ describe("detectSkills", () => {
     expect(found).not.toContain("C");
   });
 
-  it("does not treat React Native as plain Node or vice versa, but finds both React skills", () => {
-    const found = detectSkills("Mobile apps in React Native");
-    expect(found).toContain("React Native");
+  it("lets a longer skill name win over a shorter one inside it", () => {
+    expect(detectSkills("Mobile apps in React Native")).toEqual(["React Native"]);
+    expect(detectSkills("Styled with Tailwind CSS")).toEqual(["Tailwind CSS"]);
+    expect(detectSkills("Apps in React Native and React")).toEqual(["React", "React Native"]);
   });
 
   it("accepts a skill at the end of a sentence", () => {

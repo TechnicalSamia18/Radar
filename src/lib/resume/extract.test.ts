@@ -39,7 +39,7 @@ describe("extractResume", () => {
     expect(await extractResume(new Uint8Array())).toMatchObject({ ok: false, reason: "empty" });
   });
 
-  it("rejects a file over 5 MB without parsing it", async () => {
+  it("rejects a file over 4 MB without parsing it", async () => {
     const big = new Uint8Array(MAX_RESUME_BYTES + 1);
     big.set(new TextEncoder().encode("%PDF-1.4"));
     expect(await extractResume(big)).toMatchObject({ ok: false, reason: "too_large" });
