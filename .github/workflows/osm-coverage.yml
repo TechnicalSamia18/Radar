@@ -1,0 +1,15 @@
+# One-off: measures OpenStreetMap coverage of Pakistani software offices (A-08).
+name: OSM coverage check
+on:
+  push:
+    paths: [scripts/osm-coverage.sh, .github/workflows/osm-coverage.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/osm-coverage.sh
