@@ -9,4 +9,5 @@
 | R-05 | Auth.js v5 is beta | — | — | Closed: login cut from v1 (ADR-003) | Dev |
 | R-06 | Scope creep | High | Medium | Anything outside the PRD goes to `docs/BACKLOG.md` | User |
 | R-07 | Profile Server Actions have no login | — | High if deployed with write access | Deployed build is read-only demo (ADR-003): writes disabled when DEMO_MODE is set; test this before deploy | Dev |
-| R-08 | Google Places bill if a loop runs away | Low | Medium | Hard cap on calls per discovery run; set a quota in Google Cloud; key optional | Dev |
+| R-08 | Google Places bill | — | — | Closed: Places dropped (ADR-004) | Dev |
+| R-09 | OpenStreetMap has few Pakistani software offices, so automatic discovery finds little | Medium | Medium | Measure per city at M2 and report in README; CSV import + add by hand remain | Dev |

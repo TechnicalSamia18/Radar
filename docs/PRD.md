@@ -513,7 +513,7 @@ The full PRD was estimated at 11–13 build hours; the assignment asks for a sma
 
 | Area | In v1 | Not in v1 (reason) |
 |---|---|---|
-| Discovery | REQ-001 CSV import, REQ-002 add by hand, REQ-004 non-software filter, **REQ-003 automated discovery via Google Places (optional key, free monthly tier) and OpenStreetMap (no key)** | Automated PSEB import: its terms for automated use are unknown; PSEB data can still come in by CSV |
+| Discovery | REQ-001 CSV import, REQ-002 add by hand, REQ-004 non-software filter, **REQ-003 automated discovery via OpenStreetMap (free, no key)** | Google Places: needs a card on file and bills past the free allowance (free-only rule). Automated PSEB import: its terms for automated use are unknown; PSEB data can still come in by CSV |
 | Careers source | REQ-010, REQ-012, REQ-013 override | REQ-011 hiring-platform feeds: few Pakistani software houses use them; their pages are still read as normal careers pages |
 | Checking | REQ-020, REQ-021, REQ-024 | — |
 | Extraction | REQ-022 (rules-based) | REQ-023 AI extraction: the app must work without it; adds a paid key and a new failure mode |
@@ -521,4 +521,6 @@ The full PRD was estimated at 11–13 build hours; the assignment asks for a sma
 | Dashboard | REQ-050, REQ-051 combined filters, REQ-052 as CSV (formula-safe) | Excel (.xlsx): CSV opens in Excel; one fewer dependency |
 | Tracking | REQ-060, REQ-061, REQ-062, REQ-063 | — |
 | Failure states | All of §4 | Duplicate-opening merging: rare in practice; duplicates show twice |
-| Hosting | Public read-only demo with fictional sample data; real data runs locally | Online login (Auth.js) + delete-my-data: Auth.js v5 is still beta and a login adds risk; local data is also the most private |
+| Hosting | Public read-only demo with fictional sample data built into the app (no hosted database); real data runs locally in SQLite | Online login (Auth.js) + delete-my-data: Auth.js v5 is still beta and a login adds risk; local data is also the most private |
+
+**Free-only rule (4 Nov 2026, user):** nothing paid. If a free option exists we use it; otherwise the feature is skipped. Google Places and Turso are therefore not used.

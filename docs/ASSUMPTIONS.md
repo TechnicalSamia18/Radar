@@ -7,6 +7,6 @@
 | A-03 | PSEB Tech Hub terms may not allow automated import. | [UNKNOWN] (PRD §9) | User reads T&C / emails PSEB; fallback CSV + Google Places | Open |
 | A-04 | Demo-mode sample data uses fictional companies (Nimbus Labs, Kestrel Systems…) and is labelled as sample data. | [ASSUMED] | Confirmed by user 2026-11-04 | Closed [USER] |
 | A-05 | Share of PK software houses with careers pages / feeds / emails. | [UNKNOWN] (PRD §9) | Measure on first 50 companies; report in README | Open |
-| A-06 | Vercel caps function request bodies at ~4.5 MB, so resumes are limited to 4 MB. | [ASSUMED] | Check Vercel docs before deploy (M10) | Open |
-| A-07 | Google Places Text Search Pro has a 5,000-call free monthly tier, then $32 per 1,000 (third-party summary of Google's price list, Oct 2026). | [VERIFIED: openplacesapi.com/blog/google-places-api-pricing; re-check on developers.google.com before use] | Re-check official page at M2 | Open |
+| A-06 | Vercel caps function request bodies at ~4.5 MB, so resumes are limited to 4 MB. | [ASSUMED] | Moot for the read-only demo (no uploads online); still applies to local use: none | Closed |
+| A-07 | Google Places Text Search Pro has a 5,000-call free monthly tier, then $32 per 1,000 (third-party summary of Google's price list, Oct 2026). | [VERIFIED: openplacesapi.com/blog/google-places-api-pricing; re-check on developers.google.com before use] | Moot: Google Places dropped (ADR-004) | Closed |
 | A-08 | OpenStreetMap coverage of Pakistani software offices is thin. | [UNKNOWN] | Measure at M2 (count results per city) | Open |
